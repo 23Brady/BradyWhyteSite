@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My favorite game</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+   <style>
+       body {
+           background-color: #9fa8da;
+           font-family: Arial, sans-serif;
+       }
+       .container {
+           margin-top: 20px;
+       }
+       h4 {
+           color: white;
+       }
+       .card .card-image img {
+           height: 200px;
+           object-fit: cover;
+       }
+   </style>
+</head>
+<nav>
+       <div class="nav-wrapper teal">
+           <nav class="header-bg purple lighten-4">
+        <ul>
+           <li><a href="index.html">Main Page</a></li>
+           <li> <a href="aboutme.html">About me!</a></li>
+          <li> <a href="portfolio.html">portfolio</a></li>
+         <li><a href="materialize.html">Materialize</a></li>
+                  </ul>
+               </div>
+           </div>
+           </nav>
+<body>
+
+
+   <!-- Text and Background -->
+   <div class="container indigo lighten-3">
+       <h4 class="center-align">My Favorite Game</h4>
+   </div>
+
+
+   
+
+
+   <!-- Cards -->
+   <div class="container center-align">
+       <h4></h4>
+       <div class="card">
+           <div class="card-image">
+               
+               
+           </div>
+           <div class="card-content">
+            <img src="images/Deltarune.png" alt="Sample Image" class="circle responsive-img">
+               <div class ="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CN4ZcGJoZac?si=vVRKssWI8xEoCV-o"  frameborder="0" allowfullscreen></iframe>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <!-- Materialize JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+   <script>
+       document.addEventListener('DOMContentLoaded', function() {
+           var elems = document.querySelectorAll('.materialboxed');
+           var instances = M.Materialbox.init(elems);
+       });
+   </script>
+</body>
+</html>
