@@ -20,6 +20,10 @@
            height: 200px;
            object-fit: cover;
        }
+        .demo-section { margin-top: 32px; }
+        .controls .btn { margin-right: 8px; margin-bottom: 8px; }
+        .carousel { margin-top: 12px; }
+
    </style>
 </head>
 <nav>
@@ -35,8 +39,6 @@
            </div>
            </nav>
 <body>
-
-
    <!-- Text and Background -->
    <div class="container indigo lighten-3">
        <h4 class="center-align">My Favorite Game</h4>
@@ -63,7 +65,36 @@
        </div>
    </div>
 
-   <!-- Materialize JS -->
+ <!-- FULL-WIDTH CAROUSEL SLIDER -->
+    <section id="fullwidth" class="demo-section">
+      <h5>3) Full-Width Carousel Slider</h5>
+
+
+      <div class="controls">
+        <button id="fwPrev" class="btn waves-effect">Prev</button>
+        <button id="fwNext" class="btn waves-effect">Next</button>
+        <button id="fwToggle" class="btn waves-effect">Toggle Autoplay</button>
+      </div>
+
+
+      <div class="carousel carousel-slider" id="fullWidthCarousel">
+        <a class="carousel-item" href="#slide1!">
+          <img alt="Slide 1" src="https://picsum.photos/id/1065/1200/500" />
+        </a>
+        <a class="carousel-item" href="#slide2!">
+          <img alt="Slide 2" src="https://picsum.photos/id/1075/1200/500" />
+        </a>
+        <a class="carousel-item" href="#slide3!">
+          <img alt="Slide 3" src="https://picsum.photos/id/1085/1200/500" />
+        </a>
+      </div>
+
+
+      <p class="grey-text">
+        This uses <code>carousel carousel-slider</code> with <code>fullWidth: true</code> and indicators enabled.
+      </p>
+    </section>
+<!-- Materialize JS -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
    <script>
        document.addEventListener('DOMContentLoaded', function() {
@@ -71,5 +102,35 @@
            var instances = M.Materialbox.init(elems);
        });
    </script>
+   <script>
+      const fwElem = document.querySelector('#fullWidthCarousel');
+      const fwInstance = M.Carousel.init(fwElem, {
+        fullWidth: true,
+        indicators: true
+      });
+      document.querySelector('#fwPrev').addEventListener('click', () => fwInstance.prev());
+      document.querySelector('#fwNext').addEventListener('click', () => fwInstance.next());
+      let autoplayOn = false;
+      let autoplayTimer = null;
+
+
+      function startAutoplay() {
+        autoplayTimer = setInterval(() => fwInstance.next(), 3000);
+        autoplayOn = true;
+      }
+      function stopAutoplay() {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+        autoplayOn = false;
+      }
+
+
+      document.querySelector('#fwToggle').addEventListener('click', () => {
+        if (autoplayOn) stopAutoplay();
+        else startAutoplay();
+      });
+
+    </script>
+   
 </body>
 </html>

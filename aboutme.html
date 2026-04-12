@@ -5,6 +5,11 @@
     <body class="main-page">
         <script src="java.js"></script>
         <h1 class="main-header">More about me!</h1>
+        <div class="nav">
+            <div class="nav-item"><a href="index.html">Main Page</a></div>
+            <div class="nav-item"><a href="portfolio.html">Portfolio</a></div>
+            <div class="nav-item"><a href="materialize.html">Materialize</a></div>
+        </div>
         <p class="about-me-text">I don't just enjoy making games, playing them is my biggest hobby.
            It's not just video games either, I really enjoy playing Dungeons and Dragons for example.
            I think games are one of the best ways to come together with those around you and share an experience.
@@ -18,6 +23,11 @@
             <li class="list-item">Minecraft</li>
             <li class="list-item">Elden Ring</li>
         </ol>
+        <div class="carousel, centered" >
+            <a class="carousel-item" href="#one!"><img src="images/Deltarune.png"></a>
+            <a class="carousel-item" href="#two!"><img src="images/Minecraft.jpg"></a>
+            <a class="carousel-item" href="#three!"><img src="images/EldenRing.jpg"></a>
+        </div>
         <p class="table-title">Here is a table of some of my favorite games by genre.</p>
         <table class="fav-table">
             <tr>
@@ -41,8 +51,27 @@
             <input type="text" id="userInput" name="fav"><br>
             <input type="submit" onclick="getResponse()">
         </form>
-        <footer class="return">
-            <a href="index.html">Return to previous page</a>
-        </footer>
+        <h3 class="centered">Fun Facts About Me!</h3>
+        <ul class="collapsible, centered">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.carousel');
+                var instances = M.Carousel.init(elems, options);
+            });
+        </script>
     </body>
 </html>
