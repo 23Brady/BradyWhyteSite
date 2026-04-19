@@ -124,3 +124,12 @@ a:visited{
     text-align: center;
     background-color: #7d7dde;
 }
+.hide{
+    font-size: 12px;
+}
+.suggestion{
+    font-size: 12px;
+}
+.fade{
+    background-color: #419fe3;
+}

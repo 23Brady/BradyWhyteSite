@@ -1,0 +1,57 @@
+<html>
+    <head> 
+        <link rel="stylesheet"href="style.css"></head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $(".hide").click(function(){
+                $(this).hide();
+            });
+        });
+        </script>
+        <script>
+            $(document).ready(function(){
+            $(".suggestion").click(function(){
+                $(this).text("go play Metaphor ReFantazio!");
+            });
+        });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(".fade").click(function(){
+                    $(this).fadeOut();
+                });
+            });
+        </script>
+        
+
+    </head>
+    <title>Portfolio</title>
+    <body class="main-page">
+        <h1 class="main-header">Jquery</h1>
+        <div class="nav">
+            <div class="nav-item"><a href="aboutme.html">About Me</a></div>
+            <div class="nav-item"><a href="portfolio.html">Portfolio</a></div>
+            <div class="nav-item"><a href="index.html">Main Page</a></div>
+            <div class="nav-item"><a href="materialize.html">Materialize</a></div>
+        </div>
+        <section style="background-color: #ff7ceb;">
+            <p class="hide">
+                This page is meant to be a place to display various forms of Jquery, for example, click this text to have it disappear!
+            </p>
+        </section>
+        <section style="background-color: #802bcb;">
+            <p>
+                Click below this line to see my current game suggestion.
+            </p>
+            <p class="suggestion">
+                View suggestion.
+            </p>
+        </section>
+        <section class="fade">
+            <p>
+                click this section to have it fade away!
+            </p>
+        </section>
+    </body>
+</html>
